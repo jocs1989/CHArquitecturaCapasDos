@@ -1,0 +1,16 @@
+
+ 
+    <!-- login div -->
+<div class="login">
+<!-- login header -->
+  <h1 id="header">Login</h1>
+<!-- start da login goodness -->
+  <form id="form" action="/api/login/" method="post">
+    
+    <input type="text" placeholder="Cual es  tu email" maxlength="100" name="username" id="username" required><br />
+        <input type="password" placeholder="password" name="password" id="password" required><br />
+        <span>{{acceso}}</span>
+
+    <button type="submit" class="btn btn-primary"><span>Login</span></button>
+  </form>
+</div>

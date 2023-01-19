@@ -1,0 +1,50 @@
+
+ 
+    <header>
+        <h1>Usuario</h1>
+    </header>
+    <main>
+      <div
+        class="container-fluid bg-trasparent my-4 p-3"
+        style="position: relative"
+      >
+      
+        <div
+          class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3"
+        >
+        
+        
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <img
+                src='{{usuario.urlImg}}'
+                class="card-img-top"
+                alt='Imagen de {{usuario.title}}'
+              />
+              <div class="card-body">
+                <div class="clearfix mb-3">
+                  <span class="float-start badge rounded-pill bg-primary"
+                    >{{usuario.nombre}}</span
+                  >
+                  <span class="float-end price-hp">{{usuario.price}}</span>
+                </div>
+                <h5 class="card-title">
+                  
+                </h5>
+                <div class="text-center my-4">
+                  <a href="/api/productos" class="btn btn-warning">Agregar Productos</a>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+        
+
+
+        </div>  
+    </div>
+    
+
+
+    </main>

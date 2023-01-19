@@ -1,0 +1,29 @@
+
+ 
+    <!-- login div -->
+<div class="login">
+    <script>
+   const phoneInputField = document.querySelector("#phone");
+   const phoneInput = window.intlTelInput(phoneInputField, {
+     utilsScript:
+       "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+   });
+ </script>
+<!-- login header -->
+  <h1 id="header">Registrar</h1>
+
+<!-- start da login goodness -->
+  <form id="form" action="/api/user/" method="post" enctype="multipart/form-data">
+    <input type="text" placeholder="Cual es  tu nombre" maxlength="16" name="nombre" id="nombre" required><br />
+    <input type="text" placeholder="Cual es  tu email" maxlength="50" name="email" id="email" required><br />
+    <input type="text" placeholder="Cual es  tu dirección" maxlength="16" name="direccion" id="direccion" required><br />
+     <input type="text" placeholder="Cual es  tu edad" maxlength="3" name="edad" id="edad" required><br />
+
+   <input id="phone" type="tel" name="phone" /><br />
+   
+    <input type="password" placeholder="password" name="password" id="password" required><br />
+    <input type="text" placeholder="Cual es  tu rol" maxlength="16" name="role" id="role" required><br />
+    <input type="file" placeholder="Agrega tu foto" name="file" id="file" accept=".jpg, .jpeg, .png"><br />
+    <button type="submit" class="btn btn-primary"><span>Registrar</span></button>
+  </form>
+</div>
