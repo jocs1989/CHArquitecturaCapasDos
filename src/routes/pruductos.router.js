@@ -1,13 +1,13 @@
-import { Router } from 'express'
+import { Router } from 'express';
 
 import {
   addProduct,
   deleteProductById,
   getAllProducts,
   getProductsById,
-  updateProductById
-} from '../controller/productos.controller.js'
-import { isAdmin } from '../middleware/permisos.js'
+  updateProductById,
+} from '../controller/productos.controller.js';
+import { isAdmin } from '../middleware/permisos.js';
 
 const router= Router();
 router.get('/', getAllProducts )

@@ -1,24 +1,24 @@
 {
   "stats": {
-    "suites": 7,
+    "suites": 6,
     "tests": 4,
     "passes": 2,
     "pending": 0,
     "failures": 2,
-    "start": "2023-01-26T03:05:59.984Z",
-    "end": "2023-01-26T03:06:01.767Z",
-    "duration": 1783,
-    "testsRegistered": 4,
-    "passPercent": 50,
+    "start": "2023-01-26T04:09:05.959Z",
+    "end": "2023-01-26T04:09:07.437Z",
+    "duration": 1478,
+    "testsRegistered": 5,
+    "passPercent": 40,
     "pendingPercent": 0,
-    "other": 0,
-    "hasOther": false,
-    "skipped": 0,
-    "hasSkipped": false
+    "other": 1,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "ce7358e9-cb3c-426e-8066-1e7dcba20b0e",
+      "uuid": "a6121a65-6062-4679-b5c7-43edf05e1da6",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "dbdbf155-804a-4b8f-b114-87af974f9033",
+          "uuid": "2c70d085-f6d4-43c6-97e2-824006f2de54",
           "title": "Test Base de datos",
           "fullFile": "/home/jocs/coderHouse/clase42/src/test/bd.test.js",
           "file": "/src/test/bd.test.js",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "fcdcb438-d946-418d-9f6b-2e8e82171c62",
+              "uuid": "385bf44b-ab8c-4668-88e6-a520b0b5f24b",
               "title": "Clase Productos.getById",
               "fullFile": "/home/jocs/coderHouse/clase42/src/test/bd.test.js",
               "file": "/src/test/bd.test.js",
@@ -47,7 +47,7 @@
                   "title": "Deberia listar un producto por id",
                   "fullTitle": "Test Base de datos Clase Productos.getById Deberia listar un producto por id",
                   "timedOut": false,
-                  "duration": 1623,
+                  "duration": 1321,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -56,26 +56,26 @@
                   "context": null,
                   "code": "const product = {\n    _id: \"a4fcf0bdcdfc86bf0dc4d986\",\n    nombre: \"Computadora\",\n    descripcion: \"The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients\",\n    codigo: 1640,\n    url: \"https://loremflickr.com/1234/2345/Computadora?lock=41586\",\n    precio: 656,\n    stock: 40,\n    timestamp: \"2022-11-17T00:53:25.383Z\",\n    __v: 0\n  }\n const vl= await articulos.getById(\"a4fcf0bdcdfc86bf0dc4d986\",1)\n\n \n  assert.strictEqual(product,product)",
                   "err": {},
-                  "uuid": "c1593408-0df5-4b25-bd87-6c96a9a5a02e",
-                  "parentUUID": "fcdcb438-d946-418d-9f6b-2e8e82171c62",
+                  "uuid": "1ee5197a-c284-4748-bbdf-52183065a866",
+                  "parentUUID": "385bf44b-ab8c-4668-88e6-a520b0b5f24b",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "c1593408-0df5-4b25-bd87-6c96a9a5a02e"
+                "1ee5197a-c284-4748-bbdf-52183065a866"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 1623,
+              "duration": 1321,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "d8ab6099-3aea-4626-bfb4-ad1e1ec95135",
+              "uuid": "f55316ce-0b8b-4fcc-800e-b137c53c7fda",
               "title": "DtoProducto",
               "fullFile": "/home/jocs/coderHouse/clase42/src/test/bd.test.js",
               "file": "/src/test/bd.test.js",
@@ -86,7 +86,7 @@
                   "title": "Filtra  un producto por id en un objeto",
                   "fullTitle": "Test Base de datos DtoProducto Filtra  un producto por id en un objeto",
                   "timedOut": false,
-                  "duration": 68,
+                  "duration": 67,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -99,8 +99,8 @@
                     "estack": "AssertionError [ERR_ASSERTION]: Expected \"actual\" to be reference-equal to \"expected\":\n+ actual - expected ... Lines skipped\n\n  {\n    codigo: 1640,\n...\n    precio: 656,\n    stock: 40,\n-   timestamp: '2022-11-17T00:53:25.383Z',\n    url: 'https://loremflickr.com/1234/2345/Computadora?lock=41586'\n  }\n    at Context.<anonymous> (file:///home/jocs/coderHouse/clase42/src/test/bd.test.js:65:22)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
                     "diff": "   \"id\": \"a4fcf0bdcdfc86bf0dc4d986\"\n   \"nombre\": \"Computadora\"\n   \"precio\": 656\n   \"stock\": 40\n+   \"timestamp\": \"2022-11-17T00:53:25.383Z\"\n   \"url\": \"https://loremflickr.com/1234/2345/Computadora?lock=41586\"\n }\n"
                   },
-                  "uuid": "32719b64-97f3-4c8f-8e10-a2f2013feee7",
-                  "parentUUID": "d8ab6099-3aea-4626-bfb4-ad1e1ec95135",
+                  "uuid": "d8a39c2d-8c1a-4040-ad0f-eb5a75b880e6",
+                  "parentUUID": "f55316ce-0b8b-4fcc-800e-b137c53c7fda",
                   "isHook": false,
                   "skipped": false
                 }
@@ -108,11 +108,11 @@
               "suites": [],
               "passes": [],
               "failures": [
-                "32719b64-97f3-4c8f-8e10-a2f2013feee7"
+                "d8a39c2d-8c1a-4040-ad0f-eb5a75b880e6"
               ],
               "pending": [],
               "skipped": [],
-              "duration": 68,
+              "duration": 67,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
@@ -128,7 +128,7 @@
           "_timeout": 2000
         },
         {
-          "uuid": "29c71715-cbfa-4606-bd78-2d2ab16fcedb",
+          "uuid": "ab071808-7e12-4eef-9768-2a5ef706df64",
           "title": "Test Router /api/productos/",
           "fullFile": "/home/jocs/coderHouse/clase42/src/test/productos.router.test.js",
           "file": "/src/test/productos.router.test.js",
@@ -137,7 +137,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "e37f56e6-b1fc-4661-879b-058684ebf2ac",
+              "uuid": "86ca0216-a687-4aa9-bd45-d300ec7c3134",
               "title": "GET /api/productos/:id",
               "fullFile": "/home/jocs/coderHouse/clase42/src/test/productos.router.test.js",
               "file": "/src/test/productos.router.test.js",
@@ -148,7 +148,7 @@
                   "title": "debería responder con un código de estado 200 para la ruta /",
                   "fullTitle": "Test Router /api/productos/ GET /api/productos/:id debería responder con un código de estado 200 para la ruta /",
                   "timedOut": false,
-                  "duration": 84,
+                  "duration": 79,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
@@ -157,12 +157,12 @@
                   "context": null,
                   "code": "request(app)\n  .get(\"/api/productos/a4fcf0bdcdfc86bf0dc4d986\")\n  .expect(200)\n  .end((err, res) => {\n    res.body.should.be.a(\"object\");\n    res.body.should.equal(product);\n    if (err) done(err);\n    done();\n  });",
                   "err": {
-                    "message": "AssertionError: expected { articulo: { …(9) } } to equal { articulo: { …(9) } }",
-                    "estack": "AssertionError: expected { articulo: { …(9) } } to equal { articulo: { …(9) } }\n    at Test.<anonymous> (file:///home/jocs/coderHouse/clase42/src/test/productos.router.test.js:38:27)\n    at Test.assert (node_modules/supertest/lib/test.js:172:8)\n    at Server.localAssert (node_modules/supertest/lib/test.js:120:14)\n    at Object.onceWrapper (node:events:627:28)\n    at Server.emit (node:events:513:28)\n    at emitCloseNT (node:net:2133:8)\n    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)",
-                    "diff": ""
+                    "message": "AssertionError: expected { articulo: { …(9) } } to equal { articulo: { …(10) } }",
+                    "estack": "AssertionError: expected { articulo: { …(9) } } to equal { articulo: { …(10) } }\n    at Test.<anonymous> (file:///home/jocs/coderHouse/clase42/src/test/productos.router.test.js:43:27)\n    at Test.assert (node_modules/supertest/lib/test.js:172:8)\n    at Server.localAssert (node_modules/supertest/lib/test.js:120:14)\n    at Object.onceWrapper (node:events:627:28)\n    at Server.emit (node:events:513:28)\n    at emitCloseNT (node:net:2133:8)\n    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)",
+                    "diff": " {\n   \"articulo\": {\n     \"__v\": 0\n     \"_id\": \"a4fcf0bdcdfc86bf0dc4d986\"\n+     \"administrador\": true\n     \"codigo\": 1640\n     \"descripcion\": \"The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients\"\n     \"nombre\": \"Computadora\"\n     \"precio\": 656\n"
                   },
-                  "uuid": "4d684eb4-8caa-47c5-b244-36359c4d631f",
-                  "parentUUID": "e37f56e6-b1fc-4661-879b-058684ebf2ac",
+                  "uuid": "d0e0af4d-4298-4eed-a8b2-570b59096e15",
+                  "parentUUID": "86ca0216-a687-4aa9-bd45-d300ec7c3134",
                   "isHook": false,
                   "skipped": false
                 }
@@ -170,11 +170,54 @@
               "suites": [],
               "passes": [],
               "failures": [
-                "4d684eb4-8caa-47c5-b244-36359c4d631f"
+                "d0e0af4d-4298-4eed-a8b2-570b59096e15"
               ],
               "pending": [],
               "skipped": [],
-              "duration": 84,
+              "duration": 79,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "c4c7e5ef-4a77-4413-9714-4e3cf5bb3e87",
+              "title": "POST /api/productos/",
+              "fullFile": "/home/jocs/coderHouse/clase42/src/test/productos.router.test.js",
+              "file": "/src/test/productos.router.test.js",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Agregando un producto",
+                  "fullTitle": "Test Router /api/productos/ POST /api/productos/ Agregando un producto",
+                  "timedOut": false,
+                  "duration": 1,
+                  "state": "failed",
+                  "speed": "fast",
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "request(app)\n  .post('/api/productos/')\n  .send(product.articulo)\n  .expect(200)\n  .end((err,res)=>{\n    console.log( res.body)\n    res.body.should.be.a('object');\n    res.body.should.equal(valores);\n     \nif (err) done(err);\ndone();\n     \n    })",
+                  "err": {
+                    "message": "AssertionError: expected {} to equal { …(9) }",
+                    "estack": "AssertionError: expected {} to equal { …(9) }\n    at Test.<anonymous> (file:///home/jocs/coderHouse/clase42/src/test/productos.router.test.js:59:27)\n    at Test.assert (node_modules/supertest/lib/test.js:172:8)\n    at Server.localAssert (node_modules/supertest/lib/test.js:120:14)\n    at Object.onceWrapper (node:events:627:28)\n    at Server.emit (node:events:513:28)\n    at emitCloseNT (node:net:2133:8)\n    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)",
+                    "diff": "- {}\n+ {\n+   \"_id\": \"69de14bb9e2f3d6c008a05ca\"\n+   \"administrador\": true\n+   \"codigo\": \"4103\"\n+   \"descripcion\": \"The Football Is Good For Training And Recreational Purposes\"\n+   \"nombre\": \"Ratón\"\n+   \"precio\": \"193\"\n+   \"stock\": \"4\"\n+   \"timestamp\": 1674706145893\n+   \"url\": \"https://loremflickr.com/1234/2345/Ratón?lock=80434\"\n+ }\n"
+                  },
+                  "uuid": "8febac36-6545-4f26-a1e5-0f65052a3190",
+                  "parentUUID": "c4c7e5ef-4a77-4413-9714-4e3cf5bb3e87",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "8febac36-6545-4f26-a1e5-0f65052a3190"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 1,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
@@ -190,7 +233,7 @@
           "_timeout": 2000
         },
         {
-          "uuid": "a1942b28-ff7e-4028-95db-0f6809c9aee5",
+          "uuid": "0af1b8e1-25df-4381-800e-455ade4a653d",
           "title": "Test Router /api/user/",
           "fullFile": "/home/jocs/coderHouse/clase42/src/test/user.router.test.js",
           "file": "/src/test/user.router.test.js",
@@ -199,7 +242,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "d06d6246-1d36-42f3-91a5-e409d0f75ee3",
+              "uuid": "c1904a75-ffeb-4d95-b22b-6e8b08a2ea8c",
               "title": "POST /api/user/",
               "fullFile": "/home/jocs/coderHouse/clase42/src/test/user.router.test.js",
               "file": "/src/test/user.router.test.js",
@@ -210,29 +253,29 @@
                   "title": "Agregando usuario",
                   "fullTitle": "Test Router /api/user/ POST /api/user/ Agregando usuario",
                   "timedOut": false,
-                  "duration": 1,
-                  "state": "passed",
-                  "speed": "fast",
-                  "pass": true,
+                  "duration": 0,
+                  "state": null,
+                  "speed": null,
+                  "pass": false,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "request(app)\n  .post('/api/user/')\n  .send({\n   \n    nombre: \"joc\",\n    email: \"joc@uncorreo.com\",\n    direccion: \"av mexico centra\",\n    edad: \"35\",\n    phone: \"5541362547\",\n    password: \"12345\",\n    role: \"admin\",\n    urlImg: \"/home/jocs/coderHouse/CHDesafioFinal3/src/controller/../file/minion.jpg\",\n    timestamp: \"2023-01-07T20:58:12.188Z\",\n    \n  })\n  .expect(200)\n  .end((err,res)=>{\n    res.body.should.be.a('object');\n    res.body.should.equal({ acceso: \"usuario creado\" });\n   \nif (err) done(err);\ndone();\n   \n  })",
                   "err": {},
-                  "uuid": "879217ba-f0ed-4dd6-a1d3-04bc94a55c75",
-                  "parentUUID": "d06d6246-1d36-42f3-91a5-e409d0f75ee3",
+                  "uuid": "13959368-5be2-48f0-ace3-8632b598848a",
+                  "parentUUID": null,
                   "isHook": false,
-                  "skipped": false
+                  "skipped": true
                 }
               ],
               "suites": [],
-              "passes": [
-                "879217ba-f0ed-4dd6-a1d3-04bc94a55c75"
-              ],
+              "passes": [],
               "failures": [],
               "pending": [],
-              "skipped": [],
-              "duration": 1,
+              "skipped": [
+                "13959368-5be2-48f0-ace3-8632b598848a"
+              ],
+              "duration": 0,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000

@@ -7,7 +7,8 @@ import apiRouter from '../routes/index.js';
 import Mocks from '../utils/mocks/productos.mocks.js';
 
 const art = new Mocks()
-const valores = await art.save(producto)
+const valores = await art.save()
+valores.administrador=true
 let should = chai.should();
 const datosAgregados = {};
 const articulos = Productos;
@@ -22,6 +23,7 @@ let product = {
     precio: 656,
     stock: 40,
     timestamp: "2022-11-17T00:53:25.383Z",
+    administrador:true,
     __v: 0,
   },
 };
@@ -49,9 +51,10 @@ describe("Test Router /api/productos/", () => {
     it('Agregando un producto', async () => {
       request(app)
         .post('/api/productos/')
-        .send(valores)
+        .send(product.articulo)
         .expect(200)
         .end((err,res)=>{
+          console.log( res.body)
           res.body.should.be.a('object');
           res.body.should.equal(valores);
      
