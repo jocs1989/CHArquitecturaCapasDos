@@ -30,6 +30,7 @@ export async function  getAllProducts  (req, res)  {
       // res.status(200).json(respuesta);
       // res.status(200).render('partials/productos',{artuculos: respuesta});
       if(req.session.administrador){
+        
         res.status(200).render('partials/registro', { artuculos: getArticulos })
       }else {
         res.status(200).render('partials/productos', { artuculos: getArticulos })
