@@ -4,7 +4,10 @@ import request from 'supertest';
 
 import Productos from '../presistencia/dao/productos/index.js';
 import apiRouter from '../routes/index.js';
+import Mocks from '../utils/mocks/productos.mocks.js';
 
+const art = new Mocks()
+const valores = await art.save(producto)
 let should = chai.should();
 const datosAgregados = {};
 const articulos = Productos;
@@ -42,4 +45,21 @@ describe("Test Router /api/productos/", () => {
         });
     });
   });
+  describe('POST /api/productos/', () => {
+    it('Agregando un producto', async () => {
+      request(app)
+        .post('/api/productos/')
+        .send(valores)
+        .expect(200)
+        .end((err,res)=>{
+          res.body.should.be.a('object');
+          res.body.should.equal(valores);
+     
+      if (err) done(err);
+      done();
+     
+    })
+    });
+  });
+  
 });
